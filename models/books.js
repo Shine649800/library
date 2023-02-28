@@ -23,9 +23,9 @@ module.exports = (sequelize, DataTypes) => {
     title: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Books',
+    modelName: 'Book',
     timestamps:false,
-    tableName: 'courses'
+    tableName: 'Books'
   });
   return Books;
 };
