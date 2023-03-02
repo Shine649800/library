@@ -1,24 +1,26 @@
 extends ../layout
 
 block content
-    h3 Books
+    h3 books
     table
         thead
             tr
-                th author
+                th title
+                //th author
                 th publisher
                 th genre
                 th pages
                 th image
                 th description
-                th title
         tbody
-            each Book in Books
+            each book in books
                 tr
-                    td= Book.author
-                    td= Book.publisher
-                    td= Book.genre
-                    td= Book.pages
-                    td= Book.image
-                    td= Book.description
-                    td= Book.title
+                    td= book.title
+                    //td= book.author
+                    td= book.publisher
+                    td= book.genre
+                    td= book.pages
+                    td= book.image
+                    td= book.description
+                    td
+                        a(href=`/books/profile/${book.id}`) View Book
