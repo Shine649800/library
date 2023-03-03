@@ -17,7 +17,7 @@ mixin bookForm(book, genres, saveUrl, cancelUrl)
             div.form-input
                 label(for='genre') Genre
                 select(id='genre' name='genre')
-                    each genre in genres
+                    each genre in ['Historical Fiction', 'Science Fiction', 'Fantasy', 'Non Fiction', 'Fiction', 'Horror', 'Psychological Horror']
                         option(value=genre selected = (genre === book.genre)) #{genre}
 
             div.form-input

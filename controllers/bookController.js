@@ -55,3 +55,12 @@ module.exports.addBook = async function(req,res){
     })
     res.redirect(`/books/profile/${book.id}`);
 }
+
+module.exports.deleteBook = async function(req, res){
+    await Book.destroy({
+        where: {
+            id:req.params.id
+        }
+    });
+    res.redirect('/books');
+}
